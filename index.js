@@ -37,3 +37,25 @@ function data(result, word){
         document.querySelector(".meaning span").innerText = definitions.definition;
     }
 }
+//Events
+searchInput.addEventListener("keyup", e =>{
+    let word = e.target.value.replace(/\s+/g, ' ');
+    if(e.key == "Enter" && word){
+        fetchApi(word);
+    }
+});
+
+removeIcon.addEventListener("click", ()=>{
+    searchInput.value = "";
+    searchInput.focus();
+    pageContent.classList.remove("active");
+    infoText.style.color = "#9A9A9A";
+    infoText.innerHTML = "Type any existing word and press enter to get meaning";
+});
+
+resetBtn.addEventListener('click', (e)=>{
+    pageContent.classList.remove("active");
+    infoText.innerHTML = "";
+    searchInput.value = "";
+
+})
