@@ -8,7 +8,7 @@ Click on the link below to open the project site.
 [Dictionary](https://gloriaoduor.github.io/Phase-1-project/)
 
 ### Author:
-Gloria Oduor :joy:
+Gloria Oduor :blush:
 
 ### License 
 [MIT License](https://choosealicense.com/licenses/mit/#)
