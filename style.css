@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #abaee4;
+}
+  
+.page-content{
+    width: 420px;
+    border-radius: 7px;
+    background: #fff;
+    padding: 25px 28px 45px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.page-content header{
+    font-size: 28px;
+    text-align: center;
+}
+.page-content .search{
+    position: relative;
+    margin: 35px 0 18px;
+}
+.search input{
+    height: 53px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 0 42px;
+    border: 1px solid rgb(182, 41, 41);
+}
+.search input::placeholder{
+    color: #0c0909;
+}
+.search :where(i, span){
+    position: absolute;
+    top: 50%;
+    color: #999;
+    transform: translateY(-50%);
+}
+.search i{
+    left: 18px;
+    pointer-events: none;
+    font-size: 16px;
+}
+.search span{
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+.search input:valid ~ span{
+    display: block;
+}
+.page-content .info-text{
+    font-size: 13px;
+    color: #9A9A9A;
+    margin: -3px 0 -10px;
+}
+.page-content.active .info-text{
+    display: none;
+}
+.info-text span{
+    font-weight: 500;
+}
+.page-content ul{
+    height: 0;
+    opacity: 0;
+    padding-right: 1px;
+    overflow-y: hidden;
+    transition: all 0.2s ease;
+}
+.page-content.active ul{
+    opacity: 1;
+    height: 303px;
+}
+.page-content ul li{
+    display: flex;
+    list-style: none;
+    margin-bottom: 14px;
+    align-items: center;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D9D9D9;
+    justify-content: space-between;
+}
+ul li:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+ul .word p{
+    font-size: 22px;
+    font-weight: 500;
+}
+ul .word span{
+    font-size: 12px;
+    color: #989898;
+}
+ul .word i{
+    color: #999;
+    font-size: 15px;
+    cursor: pointer;
+}
+ul .content{
+    max-height: 215px;
+    overflow-y: auto;
+}
+.content li p{
+    font-size: 17px;
+    font-weight: 500;
+}
+.content li span{
+    font-size: 15px;
+    color: #7E7E7E;
+}
