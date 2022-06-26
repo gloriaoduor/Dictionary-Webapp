@@ -20,3 +20,20 @@ function fetchApi(word){
     });
 }
 
+//function to search for the word
+function search(word){
+    fetchApi(word);
+    searchInput.value = word;
+}
+
+//function to display the result of the query 
+function data(result, word){
+    if(result.title){
+        infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Check your spelling or try another word`;
+    }else{
+        pageContent.classList.add("active");
+        let definitions = result[0].meanings[0].definitions[0];
+        document.querySelector(".word p").innerText = result[0].word;
+        document.querySelector(".meaning span").innerText = definitions.definition;
+    }
+}
